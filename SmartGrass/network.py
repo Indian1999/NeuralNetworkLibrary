@@ -26,4 +26,7 @@ class Network:
                     error = layer.backward_propagation(error, learning_rate)
             error_in_epoch /= samples
             print(f"Epoch Nr.{i+1}/{epochs}, error = {error_in_epoch}")
+
+    def predict(self, input):
+        raise NotImplementedError
             
