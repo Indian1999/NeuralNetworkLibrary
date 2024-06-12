@@ -28,5 +28,12 @@ class Network:
             print(f"Epoch Nr.{i+1}/{epochs}, error = {error_in_epoch}")
 
     def predict(self, input):
-        raise NotImplementedError
+        samples = len(input)
+        result = []
+        for i in range(samples):
+            output = input[i]
+            for layer in self.layers:
+                output = layer.forward_propagation(output)
+            result.append(output)
+        return result
             
