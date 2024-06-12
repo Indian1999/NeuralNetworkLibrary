@@ -12,7 +12,7 @@ class FCLayer(Layer):
         return self.output
     
     def backward_propagation(self, output_error, learning_rate):
-        input_error = np.dot(output_error, self.weigths.T) 
+        input_error = np.dot(output_error, self.weights.T) 
         # Ez megy majd vissza az előző rétegnek
         weights_error = np.dot(self.input.T, output_error) 
         # Ezzel meg korrigálunk

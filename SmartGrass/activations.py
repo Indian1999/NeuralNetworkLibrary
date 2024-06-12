@@ -13,10 +13,10 @@ def sigmoid_derivative(x):
     return x * (1 - x)
 
 def relu(x):
-    return max([0, x])
+    return max([0, x.any()])
 
 def relu_derivative(x):
-    if x > 0:
+    if x.any() > 0:
         return 1
     else:
         return 0
